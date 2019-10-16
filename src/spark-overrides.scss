@@ -1,0 +1,36 @@
+$eco-green: #8CB83F;
+$eco-blue: #4D7B9E;
+
+// ==================================================================
+// Spark Overrides
+// ==================================================================
+.sprk-c-Masthead__logo {
+  max-width: 280px;
+  min-width: 275px;
+}
+
+.sprk-c-Button--primary {
+  background-color: $eco-green !important;
+  border-color: $eco-green !important;
+}
+
+.sprk-c-Button--primary:hover {
+  background-color: darken($eco-green, 10) !important;
+}
+
+.sprk-b-Link:hover {
+  color: $eco-green !important;
+}
+
+.sprk-b-Link--plain:hover, .sprk-b-Link--plain:active, .sprk-b-Link--plain:focus, .sprk-b-Link--plain:visited {
+  color: $eco-green !important;
+}
+
+.sprk-b-Link:visited {
+  color: $eco-green !important;
+}
+
+::selection {
+  background-color: $eco-green !important;
+  background: $eco-green !important;
+}
