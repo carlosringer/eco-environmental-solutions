@@ -10,134 +10,128 @@ export class HeaderComponent implements OnInit {
   constructor() { }
   links = [
     {
-    text: 'Navigation Item',
-    href: '/icons',
-    active: false
+      text: 'Navigation Item',
+      href: '/icons',
+      active: false
     },
     {
-    text: 'Your Item',
-    active: false,
-    subNav: [
-    {
-    text: 'Work With Us',
-    href: '/links'
+      text: 'Your Item',
+      active: false,
+      subNav: [
+        {
+          text: 'Work With Us',
+          href: '/links'
+        },
+        {
+          text: 'Our Misson',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 3',
+          href: '#nogo'
+        }
+      ]
     },
     {
-    text: 'Our Misson',
-    href: '#nogo'
+      text: 'Nav Item',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'settings'
     },
     {
-    text: 'Item 3',
-    href: '#nogo'
+      text: 'Navigation Item',
+      href: '#nogo',
+      leadingIcon: 'chat-online',
+      subNav: [
+        {
+          text: 'Carlos',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 2',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 3',
+          href: '#nogo'
+        }
+      ]
+    },
+    {
+      text: 'Item',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'chat-online'
     }
-    ]
+  ];
+
+  defaultNarrowLinks = [
+    {
+      text: 'Work With Us',
+      href: '#nogo',
+      active: true,
+      // subNav: [
+      //   {
+      //     text: 'Item 1',
+      //     href: '/links'
+      //   },
+      //   {
+      //     text: 'Item 2',
+      //     href: '/links'
+      //   },
+      //   {
+      //     text: 'Item 3',
+      //     href: '/links'
+      //   }
+      // ]
     },
     {
-    text: 'Nav Item',
-    href: '#nogo',
-    active: false,
-    leadingIcon: 'settings'
+      text: 'Item 2',
+      href: '#nogo',
     },
     {
-    text: 'Navigation Item',
-    href: '#nogo',
-    leadingIcon: 'chat-online',
-    subNav: [
-    {
-    text: 'Carlos',
-    href: '#nogo'
-    },
-    {
-    text: 'Item 2',
-    href: '#nogo'
-    },
-    {
-    text: 'Item 3',
-    href: '#nogo'
+      text: '(313) 544-8414',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'landline'
     }
-    ]
+  ];
+
+  siteDropdownChoices = [
+    {
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
+      value: 'Choice Title 1',
+      active: false
     },
     {
-    text: 'Item',
-    href: '#nogo',
-    active: false,
-    leadingIcon: 'chat-online'
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
+      value: 'Choice Title 2',
+      active: true
     }
-    ];
-    
-    defaultNarrowLinks = [
+  ];
+
+  simpleChoices = [
     {
-    text: 'Work With Us',
-    href: '#nogo',
-    subNav: [
-    {
-    text: 'Item 1',
-    href: '/links'
+      text: 'Change Username',
+      value: 'change-username'
     },
     {
-    text: 'Item 2',
-    href: '/links'
+      text: 'Change Password',
+      value: 'change-password'
     },
     {
-    text: 'Item 3',
-    href: '/links'
+      text: 'Sign Out',
+      value: 'sign-out'
     }
-    ]
-    },
-    {
-    text: 'Item 2',
-    href: '#nogo',
-    active: true
-    },
-    {
-    text: '(800) 555-1212',
-    href: '#nogo',
-    active: false,
-    leadingIcon: 'landline'
-    },
-    {
-    text: 'Talk To Us',
-    href: '#nogo',
-    active: false,
-    leadingIcon: 'call-team-member'
-    }
-    ];
-    
-    siteDropdownChoices = [
-    {
-    content: {
-    title: 'Choice Title',
-    infoLine1: 'Information about this choice',
-    infoLine2: 'More Information'
-    },
-    value: 'Choice Title 1',
-    active: false
-    },
-    {
-    content: {
-    title: 'Choice Title',
-    infoLine1: 'Information about this choice',
-    infoLine2: 'More Information'
-    },
-    value: 'Choice Title 2',
-    active: true
-    }
-    ];
-    
-    simpleChoices = [
-    {
-    text: 'Change Username',
-    value: 'change-username'
-    },
-    {
-    text: 'Change Password',
-    value: 'change-password'
-    },
-    {
-    text: 'Sign Out',
-    value: 'sign-out'
-    }
-    ];
+  ];
   ngOnInit() {
   }
 

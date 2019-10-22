@@ -1,12 +1,12 @@
-$eco-green: #8CB83F;
-$eco-blue: #4D7B9E;
+$eco-green: #098950;
+$eco-blue: #6CCAF3;
 
 // ==================================================================
 // Spark Overrides
 // ==================================================================
 .sprk-c-Masthead__logo {
-  max-width: 280px;
-  min-width: 275px;
+  max-width: 94px;
+  min-width: 94px;
 }
 
 .sprk-c-Button--primary {
@@ -33,4 +33,63 @@ $eco-blue: #4D7B9E;
 ::selection {
   background-color: $eco-green !important;
   background: $eco-green !important;
+}
+
+.sprk-b-PageTitle::after {
+  content: "";
+  width: 250px;
+  border-bottom-width: 15px;
+  border-bottom-style: solid;
+  border-bottom-color: $eco-green;
+  padding: 0 0 24px;
+}
+
+.sprk-b-PageTitle::before {
+  border: none;
+}
+
+footer.sprk-o-CenteredColumn {
+  margin: 0 auto;
+  max-width: 89rem;
+}
+
+.sprk-c-Masthead__content {
+  padding: 10px;
+}
+
+.sprk-c-Masthead__branding {
+  padding: 0 0 0 24px;
+}
+
+.contact-card {
+  max-width: 600px !important;
+  min-height: 500px;
+}
+
+.sprk-c-Promo {
+  @media(max-width: 1279px) {
+    margin: 0 !important;
+  } 
+}
+
+.sprk-c-Promo__content .sprk-c-Button {
+  background-color: #fff;
+  border: 2px solid #cfcfcf;
+  color: #333;
+  letter-spacing: .62px;
+}
+
+.sprk-c-Promo__content .sprk-c-Button:hover {
+  box-shadow: 0 3px 10px rgba(20, 20, 20, 0.08);
+  background-color: white;
+  border: 2px solid #333333;
+  color: #333333;
+}
+
+.sprk-c-Promo__title {
+  line-height: 1.23;
+  color: #333333;
+  font-family: RocketSans, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.625rem;
+  font-weight: bold;
 }

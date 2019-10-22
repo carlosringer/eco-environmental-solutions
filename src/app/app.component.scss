@@ -1,9 +1,32 @@
 .page {
-  margin: 20px auto;
-  max-width: 89rem;
   min-height: 600px;
 }
 
+section:first-of-type, section:last-of-type {
+  padding: 64px;
+}
+
 section {
-  margin: 50px 0px;
+  padding: 0 64px 64px 64px;
+}
+
+.section-container {
+  margin: 0 auto;
+  max-width: 89rem;
+}
+
+.alt-section {
+  background-color: #f7f7f7;
+}
+
+.sprk-b-InputContainer {
+  max-width: none;
+}
+
+.contact-header {
+  margin: 20px 0 40px 0;
+}
+
+.section-image {
+  max-width: 100%;
 }
