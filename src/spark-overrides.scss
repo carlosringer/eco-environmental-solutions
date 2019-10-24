@@ -110,3 +110,10 @@ footer.sprk-o-CenteredColumn {
     bottom: 90px !important;
   }
 }
+
+// Disable mobile nav
+.sprk-c-Masthead__menu svg {
+  @media (max-width: 863px) {
+    display: none;
+  }
+}
