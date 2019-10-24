@@ -67,8 +67,8 @@ export class HeaderComponent implements OnInit {
 
   defaultNarrowLinks = [
     {
-      text: 'Work With Us',
-      href: '#nogo',
+      text: 'Our Mission',
+      href: '#about-us',
       active: true,
       // subNav: [
       //   {
@@ -86,8 +86,12 @@ export class HeaderComponent implements OnInit {
       // ]
     },
     {
-      text: 'Item 2',
-      href: '#nogo',
+      text: 'Services',
+      href: '/#services',
+    },
+    {
+      text: 'Press',
+      href: 'https://www.modeldmedia.com/features/detroit-firefighter-takes-on-blight.aspx',
     },
     {
       text: '(313) 544-8414',
