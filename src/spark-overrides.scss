@@ -104,3 +104,9 @@ footer.sprk-o-CenteredColumn {
   font-size: 1.625rem !important;
   font-weight: bold !important;
 }
+
+.sprk-c-HighlightBoard__content {
+  @media(max-width: 480px) {
+    bottom: 90px !important;
+  }
+}

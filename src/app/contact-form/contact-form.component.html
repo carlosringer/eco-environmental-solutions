@@ -14,9 +14,8 @@
                 name="name"
                 [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
                 type="text"
-                [(ngModel)]="name"
                 required
-                #textInput="ngModel"
+                #textInput=""
                 data-id="input-1"
                 sprkInput
               >
@@ -29,9 +28,8 @@
                 pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
                 [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
                 type="text"
-                [(ngModel)]="email"
                 required
-                #textInput="ngModel"
+                #textInput=""
                 data-id="input-1"
                 sprkInput
               >
@@ -45,9 +43,8 @@
                 type="text"
                 pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
                 placeholder="(000) 000-0000"
-                [(ngModel)]="phone_input"
                 required
-                #phoneInput="ngModel"
+                #phoneInput=""
                 data-id="input-phone-1"
                 sprkFormatterPhoneNumber
                 sprkInput
@@ -63,8 +60,6 @@
               <label sprkLabel>Message</label>
               <textarea
                 name="textarea_input"
-                [(ngModel)]="textarea_input"
-                #textareaInput="ngModel"
                 data-id="textarea-1"
                 sprkInput
               ></textarea>

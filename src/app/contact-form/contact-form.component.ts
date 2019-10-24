@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ContactFormComponent {
 
   submitted = false;
+  name: null;
+  email: null;
+  phone: null;
 
   onSubmit() { this.submitted = true; }
 
