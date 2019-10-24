@@ -1,0 +1,86 @@
+<sprk-stack itemSpacing="medium" splitAt="medium">
+    <div sprkStackItem class="sprk-o-Stack__item--half@m">
+      <sprk-card cardType="base" idString="card-20" additionalClasses="sprk-c-Card--standout contact-card">
+
+        <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+          <h3 class="sprk-b-TypeDisplayFour sprk-o-Stack__item contact-header">
+            Have questions about our services? Send us a message and we will reach out to you as soon as possible.
+          </h3>
+
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+            <sprk-input-container>
+              <label sprkLabel>Name</label>
+              <input
+                name="name"
+                [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+                type="text"
+                [(ngModel)]="name"
+                required
+                #textInput="ngModel"
+                data-id="input-1"
+                sprkInput
+              >
+            </sprk-input-container>
+
+            <sprk-input-container>
+              <label sprkLabel>Email</label>
+              <input
+                name="email"
+                pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+                [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+                type="text"
+                [(ngModel)]="email"
+                required
+                #textInput="ngModel"
+                data-id="input-1"
+                sprkInput
+              >
+            </sprk-input-container>
+
+            <sprk-icon-input-container>
+              <label sprkLabel>Phone Number *</label>
+              <input
+                name="phone_input"
+                [ngClass]="{ 'sprk-b-TextInput--error': phoneInput.invalid && phoneInput.dirty }"
+                type="text"
+                pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+                placeholder="(000) 000-0000"
+                [(ngModel)]="phone_input"
+                required
+                #phoneInput="ngModel"
+                data-id="input-phone-1"
+                sprkFormatterPhoneNumber
+                sprkInput
+              >
+              <span
+                [hidden]="phoneInput.valid || phoneInput.pristine"
+                sprkFieldError
+              >
+              </span>
+            </sprk-icon-input-container>
+
+            <sprk-textarea-container>
+              <label sprkLabel>Message</label>
+              <textarea
+                name="textarea_input"
+                [(ngModel)]="textarea_input"
+                #textareaInput="ngModel"
+                data-id="textarea-1"
+                sprkInput
+              ></textarea>
+            </sprk-textarea-container>
+
+            <button 
+              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@xs"
+              type="submit"
+              [disabled]="!contactForm.form.valid"
+              data-id="button-1">
+              Send
+            </button>
+          </form>
+
+        </div>
+      </sprk-card>
+    </div>
+    <div sprkStackItem class="sprk-o-Stack__item--half@m"></div>
+  </sprk-stack>

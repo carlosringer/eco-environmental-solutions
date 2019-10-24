@@ -64,6 +64,10 @@ footer.sprk-o-CenteredColumn {
 .contact-card {
   max-width: 600px !important;
   min-height: 500px;
+
+  // @media(max-width: 1279px) {
+  //   max-width: 100%;
+  // }
 }
 
 .sprk-c-Promo {
@@ -92,4 +96,11 @@ footer.sprk-o-CenteredColumn {
   font-family: RocketSans, Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.625rem;
   font-weight: bold;
+}
+
+.service-card h3 {
+  line-height: 1.23;
+  color: #333333;
+  font-size: 1.625rem !important;
+  font-weight: bold !important;
 }
