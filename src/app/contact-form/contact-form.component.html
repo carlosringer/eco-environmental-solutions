@@ -6,16 +6,16 @@
           <h3 class="sprk-b-TypeDisplayFour sprk-o-Stack__item contact-header">
             Have questions about our services? Send us a message and we will reach out to you as soon as possible.
           </h3>
-
+          
           <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
             <sprk-input-container>
               <label sprkLabel>Name</label>
               <input
                 name="name"
-                [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+                [(ngModel)]="name"
+                class="form-control"
                 type="text"
                 required
-                #textInput=""
                 data-id="input-1"
                 sprkInput
               >
@@ -26,10 +26,10 @@
               <input
                 name="email"
                 pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
-                [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+                [(ngModel)]="email"
+                class="form-control"
                 type="text"
                 required
-                #textInput=""
                 data-id="input-1"
                 sprkInput
               >
@@ -38,28 +38,28 @@
             <sprk-icon-input-container>
               <label sprkLabel>Phone Number *</label>
               <input
-                name="phone_input"
-                [ngClass]="{ 'sprk-b-TextInput--error': phoneInput.invalid && phoneInput.dirty }"
+                name="phone"
                 type="text"
+                [(ngModel)]="phone"
+                class="form-control"
                 pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
-                placeholder="(000) 000-0000"
                 required
-                #phoneInput=""
                 data-id="input-phone-1"
                 sprkFormatterPhoneNumber
                 sprkInput
               >
-              <span
+              <!-- <span
                 [hidden]="phoneInput.valid || phoneInput.pristine"
                 sprkFieldError
               >
-              </span>
+              </span> -->
             </sprk-icon-input-container>
 
             <sprk-textarea-container>
               <label sprkLabel>Message</label>
               <textarea
                 name="textarea_input"
+                [(ngModel)]="message"
                 data-id="textarea-1"
                 sprkInput
               ></textarea>
@@ -68,7 +68,7 @@
             <button 
               class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@xs"
               type="submit"
-              [disabled]="!contactForm.form.valid"
+              (click)="toggleInfoModal($event)"
               data-id="button-1">
               Send
             </button>
